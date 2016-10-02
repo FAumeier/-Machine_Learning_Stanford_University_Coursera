@@ -37,7 +37,7 @@ grad = zeros(size(theta));
 %
 
 % Compute the cost of a particular choice of theta
-h = sigmoid(X * theta)
+h = sigmoid(X * theta);
 J = (1/m) * sum(-y .* log(h) - (1 - y) .* log(1-h));
 %regularize
 penalize = sum(theta(2:end).^2);
